@@ -1,5 +1,5 @@
 class AppFooterCtrl {
-  constructor(AppConstants) {
+  constructor(AppConstants, $scope, User) {
     'ngInject';
     this.appName = AppConstants.appName;
 

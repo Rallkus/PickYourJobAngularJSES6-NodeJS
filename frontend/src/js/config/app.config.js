@@ -3,7 +3,7 @@
 function AppConfig($stateProvider, $locationProvider, $urlRouterProvider) {
   'ngInject';
 
-
+  //httpProvider.interceptors.push(authInterceptor);
 
   /*
     If you don't want hashbang routing, uncomment this line.

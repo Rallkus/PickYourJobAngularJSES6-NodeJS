@@ -9,5 +9,10 @@ servicesModule.service('Contact', ContactService);
 import ToasterService from './toaster.service';
 servicesModule.service('Toaster', ToasterService);
 
+import UserService from './user.service';
+servicesModule.service('User', UserService);
+
+import JwtService from './jwt.service'
+servicesModule.service('JWT', JwtService);
 
 export default servicesModule;

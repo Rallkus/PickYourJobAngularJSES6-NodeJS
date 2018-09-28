@@ -12,9 +12,12 @@ import toastr from 'angular-toastr';
 import './config/app.templates';
 // Import our app functionaity
 import './layout';
+import './components';
 import './contact';
 import './home';
+import './profile';
 import './services';
+import './auth';
 import Toaster from './services/toaster.service';
 
 
@@ -26,9 +29,12 @@ const requires = [
   'ui.router',
   'templates',
   'app.layout',
+  'app.components',
   'app.home',
+  'app.profile',
   'app.contact',
   'app.services',
+  'app.auth',
   toastr
 ];
 
