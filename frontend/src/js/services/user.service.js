@@ -1,7 +1,8 @@
 export default class User {
-  constructor(JWT, AppConstants, $http, $state, $q) {
+  constructor(JWT, AppConstants, $http, $state, $q, Toaster) {
     'ngInject';
 
+    this._toaster = Toaster;
     this._JWT = JWT;
     this._AppConstants = AppConstants;
     this._$http = $http;
@@ -45,7 +46,8 @@ export default class User {
   logout() {
     this.current = null;
     this._JWT.destroy();
-    this._$state.go(this._$state.$current, null, { reload: true });
+    this._toaster.showToaster('success','Logged out');
+    this._$state.go('app.home');
   }
 
   verifyAuth() {

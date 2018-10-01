@@ -27,6 +27,18 @@ function AuthConfig($stateProvider, $httpProvider) {
     }
   })
 
+  .state('app.logout', {
+    url: '/logout',
+    controller: 'LogoutCtrl as $ctrl',
+    templateUrl: 'auth/logout.html',
+    title: 'Logout',
+    resolve: {
+      auth: function(User) {
+        return User.ensureAuthIs(true);
+      }
+    }
+  })
+
   .state('app.sociallogin', {
     url: '/auth/sociallogin',
     controller: 'SocialCtrl as $ctrl',

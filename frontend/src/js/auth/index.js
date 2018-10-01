@@ -11,6 +11,9 @@ authModule.config(AuthConfig);
 import AuthCtrl from './auth.controller';
 authModule.controller('AuthCtrl', AuthCtrl);
 
+import LogoutCtrl from './logout.controller';
+authModule.controller('LogoutCtrl', LogoutCtrl);
+
 import SocialCtrl from './social.controller';
 authModule.controller('SocialCtrl', SocialCtrl);
 
