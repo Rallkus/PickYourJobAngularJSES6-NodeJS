@@ -1,11 +1,11 @@
-<nav>
+<!--<nav>
     <div>
   
       <a ui-sref="app.home"
         ng-bind="::$ctrl.appName | lowercase">
       </a>
   
-      <!-- Show this for logged out users -->
+      <!-- Show this for logged out users --> <!--
       <ul show-authed="false"
         class="nav navbar-nav pull-xs-right">
   
@@ -43,7 +43,7 @@
   
       </ul>
   
-      <!- - Show this for logged in users -->
+      <!- - Show this for logged in users --> <!--
       <ul show-authed="true"
         class="nav navbar-nav pull-xs-right">
   
@@ -73,4 +73,66 @@
   
   
     </div>
-  </nav>
+  </nav>-->
+  <!-- BEGAIN PRELOADER -->
+ 
+
+  <!-- End login modal window -->
+
+  <!-- BEGIN MENU -->
+  <section id="menu-area">      
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" ui-sref="app.home"
+        ng-bind="::$ctrl.appName">
+      </a>             
+          <!-- IMG BASED LOGO  -->
+           <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul show-authed="false" id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.home">
+              Home
+            </a></li>               
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.contact">
+              Contact
+            </a></li>
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.login">
+              Sign in
+            </a></li>
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.register">
+              Sign up
+            </a></li>
+          </ul>
+          <ul show-authed="true" id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.home">
+              Home
+            </a></li>               
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.contact">
+              Contact
+            </a></li>
+            <li><a class="nav-link"
+              ui-sref-active="active"
+              ui-sref="app.logout">
+              Logout
+            </a></li>
+          </ul>                                          
+        </div><!--/.nav-collapse -->
+      </div>     
+    </nav>
+  </section>

@@ -1,4 +1,4 @@
-<div class="agileinfo_mail_grids">
+<!--<div class="agileinfo_mail_grids">
     <form id="contact_form" name="contact_form" class="form-contact" ng-submit="vm.SubmitContact()">
         <h2 class="form-contact-heading">CONTACT_US</h2>
 
@@ -35,11 +35,7 @@
             </select>
         </span>
         <br>
-        <span>
-          <textarea required ng-model="vm.inputMessage" class="input-block-level" rows="4" id="inputMessage" name="inputMessage" placeholder="Your comment here..." style="max-width: 100%;" dir="auto"></textarea>
-          <br>
-          <span class="text-danger" ng-show="contact_form.inputMessage.$error.required && (contact_form.inputMessage.$dirty || contact_form.inputMessage.$touched)">The comment is required</span>
-        </span>
+        
 
         <input type="submit" class="btn btn-primary" name="submit" id="submitBtn" value="SEND_BTN" ng-show="contact_form.inputName.$valid && contact_form.inputEmail.$valid && contact_form.inputMessage.$valid"
         ng-click="SubmitContact()"/>
@@ -48,4 +44,78 @@
         <div id="resultMessageFail" class="msg_error">{{vm.resultMessageFail}}</div>
     </form>
 
-</div> <!-- /container -->
+</div> <!-- /container --> 
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-area">
+           <h2 class="title">Have any Questions?</h2>
+           <span class="line"></span>
+           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+         </div>
+      </div>
+      <div class="col-md-12">
+        <div class="cotact-area">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="contact-area-left">
+                <h4>Contact Info</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                <address class="single-address">
+                  <p>P.O. Box 240000. Huntsville, AL 35813, USA Street address: 305</p>
+                  <p>support@gmail.com</p>
+                  <p>+1(06) 778 5468</p>
+                </address> 
+                <div class="footer-right contact-social">
+                   <a href="index.html"><i class="fa fa-facebook"></i></a>
+                   <a href="#"><i class="fa fa-twitter"></i></a>
+                   <a href="#"><i class="fa fa-google-plus"></i></a>
+                   <a href="#"><i class="fa fa-linkedin"></i></a>
+                   <a href="#"><i class="fa fa-pinterest"></i></a>
+                 </div>                
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="contact-area-right">
+                <form id="contact_form" name="contact_form" ng-submit="vm.SubmitContact()" class="comments-form contact-form">
+                 <div class="form-group">                        
+                   <input class="form-control" placeholder="Your Name" required ng-model="vm.inputName" type="text" id="inputName" name="inputName" dir="auto" maxlength="100">
+                   <span class="text-danger" ng-show="contact_form.inputName.$error.required && (contact_form.inputName.$dirty || contact_form.inputName.$touched)">The name is required</span>
+                  </div>
+                 <div class="form-group">                        
+                   <input type="email" required ng-model="vm.inputEmail" id="inputEmail" name="inputEmail" ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*$/i" placeholder="Email" class="form-control">
+                   <span class="text-danger" ng-show="contact_form.inputEmail.$error.required && (contact_form.inputEmail.$dirty || contact_form.inputEmail.$touched)">The email is required</span>
+          <span class="text-danger" ng-show="contact_form.inputEmail.$error.email">The email is not valid</span>
+                 </div>
+                  <div class="form-group">                        
+                      <select ng-model="vm.inputSubject" class="form-control" id="inputSubject" name="inputSubject" title="Choose subject">
+                          <option value="order">SEL_ORDER</option>
+                          <option value="programming_dept">SEL_PROG_DEPT</option>
+                          <option value="work">SEL_WORK</option>
+                          <option value="projects">SEL_NEW_PROJ</option>
+                          <option value="suggestions">SEL_SUGGEST</option>
+                          <option value="claim">SEL_CLAIM</option>
+                          <option value="suscribe">SEL_SUBSCRIBE</option>
+                          <option value="diferent">SEL_DIFFERENT</option>
+                      </select>
+                 </div>
+                 <div class="form-group">  
+                    <span>
+                        <textarea required ng-model="vm.inputMessage" id="inputMessage" name="inputMessage" placeholder="Comment" rows="3" class="form-control"></textarea>
+                   <span class="text-danger" ng-show="contact_form.inputMessage.$error.required && (contact_form.inputMessage.$dirty || contact_form.inputMessage.$touched)">The comment is required</span>
+                      </span>                      
+                   
+                 </div>
+                 <button class="comment-btn" name="submit" id="submitBtn" value="SEND_BTN" ng-show="contact_form.inputName.$valid && contact_form.inputEmail.$valid && contact_form.inputMessage.$valid" ng-click="SubmitContact()">Submit Comment</button>
+                 <div id="resultMessageOk" class="msg_ok">{{vm.resultMessageOk}}</div>
+                 <div id="resultMessageFail" class="msg_error">{{vm.resultMessageFail}}</div>
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -13,6 +13,7 @@ var merge         = require('merge-stream');
 // Where our files are located
 var jsFiles   = "src/js/**/*.js";
 var viewFiles = "src/js/**/*.html";
+var cssFiles = "src/assets/css/**/*.css";
 
 var interceptErrors = function(error) {
   var args = Array.prototype.slice.call(arguments);
@@ -45,6 +46,26 @@ gulp.task('html', function() {
       .on('error', interceptErrors)
       .pipe(gulp.dest('./build/'));
 });
+gulp.task('css', function() {
+  return gulp.src("src/assets/css/*.css")
+      .on('error', interceptErrors)
+      .pipe(gulp.dest('./build/css'));
+});
+gulp.task('js', function() {
+  return gulp.src("src/assets/js/*.js")
+      .on('error', interceptErrors)
+      .pipe(gulp.dest('./build/jstemplate'));
+});
+gulp.task('img', function() {
+  return gulp.src("src/assets/images/*.*")
+      .on('error', interceptErrors)
+      .pipe(gulp.dest('./build/images'));
+});
+gulp.task('fonts', function() {
+  return gulp.src("src/assets/fonts/*.*")
+      .on('error', interceptErrors)
+      .pipe(gulp.dest('./build/fonts'));
+});
 
 gulp.task('views', function() {
   return gulp.src(viewFiles)
@@ -69,7 +90,7 @@ gulp.task('build', ['html', 'browserify'], function() {
   return merge(html,js);
 });
 
-gulp.task('default', ['html', 'browserify'], function() {
+gulp.task('default', ['html','css','fonts','js','img', 'browserify'], function() {
 
   browserSync.init(['./build/**/**.**'], {
     server: "./build",
@@ -82,5 +103,6 @@ gulp.task('default', ['html', 'browserify'], function() {
 
   gulp.watch("src/index.html", ['html']);
   gulp.watch(viewFiles, ['views']);
+  gulp.watch(cssFiles, ['css']);
   gulp.watch(jsFiles, ['browserify']);
 });

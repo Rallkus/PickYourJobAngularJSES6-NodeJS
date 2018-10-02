@@ -1,82 +1,262 @@
-<div class="home-page">
-
-    <!-- Splash banner that only shows when not logged in -->
-    <div class="banner" show-authed="false">
-      <div class="container">
-        <h1 class="logo-font" ng-bind="::$ctrl.appName | lowercase"></h1>
-        <p>A place to share your knowledge.</p>
-      </div>
-    </div>
-  
-    <div class="container page">
-      <div class="row">
-  
-  
-        <!-- Main view - contains tabs & article list -->
-        <div class="col-md-9">
-          <!-- Tabs for toggling between feed, article lists -->
-          <div class="feed-toggle">
-            <ul class="nav nav-pills outline-active">
-  
-              <li class="nav-item" show-authed="true">
-                <a href="" class="nav-link"
-                  ng-class="{ active: $ctrl.listConfig.type === 'feed' }"
-                  ng-click="$ctrl.changeList({ type: 'feed' })">
-                  Your Feed
-                </a>
-              </li>
-  
-              <li class="nav-item">
-                <a href="" class="nav-link"
-                  ng-class="{ active: $ctrl.listConfig.type === 'all' && !$ctrl.listConfig.filters }"
-                  ng-click="$ctrl.changeList({ type: 'all' })">
-                  Global Feed
-                </a>
-              </li>
-  
-              <li class="nav-item" ng-show="$ctrl.listConfig.filters.tag">
-                <a href="" class="nav-link active">
-                  <i class="ion-pound"></i> {{$ctrl.listConfig.filters.tag}}
-                </a>
-              </li>
-  
-            </ul>
-          </div>
-  
-          <!-- List the current articles -->
-          <article-list limit="10" list-config="$ctrl.listConfig"></article-list>
-  
-        </div>
-  
-        <!-- Sidebar where popular tags are listed -->
-        <div class="col-md-3">
-          <div class="sidebar">
-  
-            <p>Popular Tags</p>
-  
-            <div class="tag-list" ng-show="$ctrl.tags">
-              <a href="" class="tag-default tag-pill"
-                ng-click="$ctrl.changeList({ type: 'all', filters: { tag: tagName } })"
-                ng-repeat="tagName in $ctrl.tags"
-                ng-bind="tagName">
-              </a>
+<section id="slider">
+  <div class="main-slider">
+    <div class="single-slide">
+      <div class="slide-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="slide-article">
+                <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Creative Design & Best Feature</h1>
+                <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+                <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More</a>
+              </div>
             </div>
-  
-            <div ng-show="!$ctrl.tagsLoaded">
-              Loading tags...
+            <div class="col-md-6 col-sm-6">
+              <div class="slider-img wow fadeInUp">
+                <img src="images/person1.png" alt="business man">
+              </div>
             </div>
-  
-            <div class="post-preview"
-              ng-show="$ctrl.tagsLoaded && !$ctrl.tags.length">
-              No tags are here... yet.
-            </div>
-  
           </div>
         </div>
-  
-        <!-- End the row & container divs -->
       </div>
-    </div>
-  
+    </div>        
   </div>
-  
+</section>
+<!-- End slider -->
+
+<!-- Start Feature -->
+<section id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-area">
+          <h2 class="title">Features</h2>
+          <span class="line"></span>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="feature-content">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-leaf feature-icon"></i>
+                <h4 class="feat-title">Creative Design</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-mobile feature-icon"></i>
+                <h4 class="feat-title">Responsive Layouts</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-thumbs-o-up feature-icon"></i>
+                <h4 class="feat-title">Great Features</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-gears feature-icon"></i>
+                <h4 class="feat-title">Multiple Options</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-code feature-icon"></i>
+                <h4 class="feat-title">Quality Code</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="single-feature wow zoomIn">
+                <i class="fa fa-smile-o feature-icon"></i>
+                <h4 class="feat-title">Awesome Support</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Feature -->
+
+<!-- Start about  -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-area">
+          <h2 class="title">About us</h2>
+          <span class="line"></span>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about -->
+
+<!-- Start counter -->
+<section id="counter">
+  <div class="counter-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="counter-area">
+            <div class="row">
+              <!-- Start single counter -->
+              <div class="col-md-3 col-sm-6">
+                <div class="single-counter">
+                  <div class="counter-icon">
+                    <i class="fa fa-suitcase"></i>
+                  </div>
+                  <div class="counter-no counter">
+                    1275
+                  </div>
+                  <div class="counter-label">
+                    Projects
+                  </div>
+                </div>
+              </div>
+              <!-- End single counter -->
+              <!-- Start single counter -->
+              <div class="col-md-3 col-sm-6">
+                <div class="single-counter">
+                  <div class="counter-icon">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                  <div class="counter-no counter">
+                    5275
+                  </div>
+                  <div class="counter-label">
+                    Hours Work
+                  </div>
+                </div>
+              </div>
+              <!-- End single counter -->
+              <!-- Start single counter -->
+              <div class="col-md-3 col-sm-6">
+               <div class="single-counter">
+                  <div class="counter-icon">
+                    <i class="fa fa-trophy"></i>
+                  </div>
+                  <div class="counter-no counter">
+                    350
+                  </div>
+                  <div class="counter-label">
+                    Awards
+                  </div>
+                </div>
+              </div>
+              <!-- End single counter -->
+              <!-- Start single counter -->
+              <div class="col-md-3 col-sm-6">
+                <div class="single-counter">
+                  <div class="counter-icon">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div class="counter-no counter">
+                    875
+                  </div>
+                  <div class="counter-label">
+                    Clients
+                  </div>
+                </div>
+              </div>
+              <!-- End single counter -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End counter -->
+
+
+<!-- Start Service -->
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-area">
+          <h2 class="title">Our Services</h2>
+          <span class="line"></span>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="service-content">
+          <div class="row">
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-desktop service-icon"></i>
+                <h4 class="service-title">Web Development</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-paw service-icon"></i>
+                <h4 class="service-title">Digital Design</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-magic service-icon"></i>
+                <h4 class="service-title">Marketing</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-shopping-cart service-icon"></i>
+                <h4 class="service-title">E-commerce</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-mobile service-icon"></i>
+                <h4 class="service-title">App Development</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+            <!-- Start single service -->
+            <div class="col-md-4 col-sm-6">
+              <div class="single-service wow zoomIn">
+                <i class="fa fa-rocket service-icon"></i>
+                <h4 class="service-title">S.E.O</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+              </div>
+            </div>
+            <!-- End single service -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Service -->
+
+<!-- Start Pricing table -->
