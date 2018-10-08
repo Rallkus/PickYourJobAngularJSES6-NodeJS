@@ -103,8 +103,17 @@ router.get('/auth/googleplus', passport.authenticate('google', { scope: [
 );
 router.get('/auth/googleplus/callback',
   passport.authenticate('google', {
-   successRedirect : 'http://nodejs-angular-final1-yomogan.c9users.io:8080/#!/auth/sociallogin',
+   successRedirect : 'http://localhost:4000/#!/auth/sociallogin',
    failureRedirect: '/' }));
+
+   router.get('/auth/twitchtv', passport.authenticate('twitchtv'));
+
+  router.get('/auth/twitchtv/callback',
+    passport.authenticate('twitchtv', {
+     successRedirect : 'http://localhost:4000/#!/auth/sociallogin',
+     failureRedirect: '/' }));
+
+   
 
 router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email', 'public_profile']}));
 router.get('/auth/facebook/callback',
