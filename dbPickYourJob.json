@@ -1,34 +1,34 @@
 db.offer.insert( 
 { "empresa": "Google", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
      "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"Cullera", "latitud": 39.1538, "longitud": -0.24289,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+     "plazasDisponibles": 3, "tipo":"informatica", "image": "images/medusa_festival.jpg", "sueldo":140000})
 
 db.offer.insert( 
 { "empresa": "Amazon", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
      "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"Villarrobledo", "latitud": 39.2716, "longitud": -2.60803,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+     "plazasDisponibles": 5, "tipo":"informatica", "image": "images/medusa_festival.jpg", "sueldo":140000})
 
 
 db.offer.insert( 
-{ "empresa": "Pep", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
-     "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"Ciudad de las Artes y las Ciencias de Valencia", "latitud": 39.4549, "longitud": -0.35049,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+{ "empresa": "Amazon", "descripcion": "Se busca experto en marketing con 2 o más años de experiencia",
+     "requisitos": "Grado en economía", "localizacion":"Ciudad de las Artes y las Ciencias de Valencia", "latitud": 39.4549, "longitud": -0.35049,
+     "plazasDisponibles": 1, "tipo":"marketing", "image": "images/medusa_festival.jpg", "sueldo":200000})
 
 
 db.offer.insert( 
-{ "empresa": "Pere", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
-     "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"Burriana", "latitud": 39.8720755, "longitud": -0.0757229,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+{ "empresa": "El Mundo", "descripcion": "Periodista con más de 5 años de experiencia",
+     "requisitos": "Grado en periodismo y Máster en relaciones públicas", "localizacion":"Burriana", "latitud": 39.8720755, "longitud": -0.0757229,
+     "plazasDisponibles": 1, "tipo":"periodismo", "image": "images/medusa_festival.jpg", "sueldo":40000})
      
 db.offer.insert( 
-{ "empresa": "Yolanda", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
-     "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"Valencia", "latitud": 39.4635, "longitud": -0.330154,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+{ "empresa": "El Mundo Today", "descripcion": "Se busca periodista",
+     "requisitos": "Grado en periodismo", "localizacion":"Valencia", "latitud": 39.4635, "longitud": -0.330154,
+     "plazasDisponibles": 2, "tipo":"periodismo", "image": "images/medusa_festival.jpg", "sueldo":50000})
 
 
 db.offer.insert( 
-{ "empresa": "GestiWeb", "descripcion": "Se busca Ingeniero informático o similar con un máster en aplicaciones web",
+{ "empresa": "GestiWeb", "descripcion": "Se busca Ingeniero informático o similar",
      "requisitos": "Máster en el ámbito del desarrollo de las aplicaciones web", "localizacion":"LHospitalet de Llobregat", 
      "latitud": 41.3618021, "longitud": 2.0777826,
-     "plazasDisponibles": 50, "image": "images/medusa_festival.jpg", "sueldo":40000})
+     "plazasDisponibles": 2, "tipo":"informatica", "image": "images/medusa_festival.jpg", "sueldo":40000})
      

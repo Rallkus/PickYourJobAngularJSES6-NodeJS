@@ -6,6 +6,7 @@ var OfferSchema = new mongoose.Schema({
   latitud: String,
   longitud: String,
   sueldo: String,
+  tipo: String,
   descripcion: String,
   image: String,
   requisitos: String,

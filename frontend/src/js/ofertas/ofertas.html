@@ -1,4 +1,6 @@
-<div id="offerItem" ng-repeat="offer in $ctrl.offers" class="container" >
+      <label>Busca ofertas: </label>
+      <input type="text" class="filtre" ng-model="$ctrl.filtro" style="vertical-align: middle;" ng-change="changeFilter()">&nbsp;
+<div id="offerItem" ng-repeat="offer in $ctrl.offersFilter" class="container" >
       <div class="row">
         <div max-width: "100%" class="col-md-6" >
             <img src="{{offer.image}}" height="220" width="400"/>
