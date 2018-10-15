@@ -15,4 +15,7 @@ servicesModule.service('User', UserService);
 import JwtService from './jwt.service'
 servicesModule.service('JWT', JwtService);
 
+import OfertasService from './ofertas.service'
+servicesModule.service('Ofertas', OfertasService);
+
 export default servicesModule;

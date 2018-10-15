@@ -1,0 +1,27 @@
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeqTen9KlvtvGNuSj3Kz06RK7Gj4WZsAU"></script> -->
+<!-- <br/> -->
+<div id="contenido" class="row">
+  <br>
+  <div class="container">
+      
+    <div class="headerevent">
+        <h2>{{$ctrl.oferta.empresa}}</h2>
+    </div>
+
+    <div style="margin-top: 50px; margin-left: 20%; margin-right: 20%;">
+        <div style="text-align: center;">
+            <img src="{{$ctrl.oferta.image}}" height="100%" width="100%"/>
+        </div>
+        <div style="text-align: center;">
+            <br>
+            {{$ctrl.oferta.descripcion}} con los siguientes requisitos: <br>
+            {{$ctrl.oferta.requisitos}} <br>
+            Con una renumeración anual de {{$ctrl.oferta.sueldo}} € anuales <br>
+            Hay un total de {{$ctrl.oferta.plazasDisponibles}}, a qué esperas?
+        </div>
+        <br>
+    </div>
+       
+    </div>
+    
+</div>

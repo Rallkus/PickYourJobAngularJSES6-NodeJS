@@ -18,6 +18,7 @@ import './home';
 import './profile';
 import './services';
 import './auth';
+import './ofertas';
 import Toaster from './services/toaster.service';
 
 
@@ -31,6 +32,7 @@ const requires = [
   'app.layout',
   'app.components',
   'app.home',
+  'app.ofertas',
   'app.profile',
   'app.contact',
   'app.services',

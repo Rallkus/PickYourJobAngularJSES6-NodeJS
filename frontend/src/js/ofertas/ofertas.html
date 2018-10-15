@@ -1,0 +1,28 @@
+<div id="offerItem" ng-repeat="offer in $ctrl.offers" class="container" >
+      <div class="row">
+        <div max-width: "100%" class="col-md-6" >
+            <img src="{{offer.image}}" height="220" width="400"/>
+          </div>
+        <div class="col-md-6"><span class="pull-left"><h1>{{offer.empresa}}</h1></span></div>
+        <div class="col-md-6"><span class="pull-left">Descripción: {{offer.descripcion}}</span></div>
+        <div class="col-md-6"><span class="pull-left">Requisitos: {{offer.requisitos}}</span></div>
+        <div class="col-md-6"><span class="pull-left">Sueldo: {{offer.sueldo}}</span></div>
+        <div class="col-md-6"><span class="pull-left"><button class="btn btn-lg btn-primary pull-xs-right"
+          type="button"       
+          ng-click="openDetails(offer._id)"
+          >More info</button></span></div>
+
+        
+      </div>
+          
+          <!--<div style="padding: 2px 5px;">
+          <div class="name" style="margin-top:5px;"><h3>{{event.name}}</h3></div>
+          <div class="type"><i>{{event.type}}</i></div>
+          <div class="place">{{event.place}}</div>
+          <div class="price">{{event.price}}€</div>
+          <div data-ng-if="event.stock != 0" class="stock"><strong> ¡Solo quedan {{event.stock}} entradas! </strong></div>
+          <div data-ng-if="event.stock == 0" class="stocke"><strong> Entradas agotadas </strong> </div>
+          <br>-->
+          <br>
+        </div>
+      </div>

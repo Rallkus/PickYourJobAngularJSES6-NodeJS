@@ -38,6 +38,7 @@ if(isProduction){
 }
 
 require('./models/User');
+require('./models/Offer');
 require('./config/passport');
 
 app.use(passport.initialize());
