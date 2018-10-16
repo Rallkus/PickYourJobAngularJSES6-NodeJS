@@ -6,6 +6,7 @@ import constants  from './config/app.constants';
 import appConfig  from './config/app.config';
 import appRun     from './config/app.run';
 import 'angular-ui-router';
+import 'angular-ui-bootstrap';
 import 'angular-animate';
 import toastr from 'angular-toastr';
 import 'ngmap';
@@ -29,6 +30,7 @@ import Toaster from './services/toaster.service';
 // Create and bootstrap application
 const requires = [
   'ui.router',
+  'ui.bootstrap',
   'templates',
   'app.layout',
   'app.components',
