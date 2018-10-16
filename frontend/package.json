@@ -26,6 +26,7 @@
     "gulp-util": "^3.0.7",
     "marked": "^0.3.5",
     "merge-stream": "^1.0.0",
+    "ngmap": "^1.18.4",
     "ng-toast": "^2.0.0",
     "ngx-toastr": "^9.0.2",
     "toastr": "^2.1.4",

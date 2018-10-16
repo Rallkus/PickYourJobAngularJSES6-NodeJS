@@ -21,6 +21,22 @@
         </div>
         <br>
     </div>
+
+    <div>
+            <ng-map center="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]" zoom="12" 
+            pan-control="true"
+            pan-control-options="{position:'TOP_RIGHT'}"
+            map-type-control="true"
+            map-type-control-options="{style:'HORIZONTAL_BAR', position:'BOTTOM_CENTER'}"
+            zoom-control="true"
+            zoom-control-options="{style:'LARGE', position:'LEFT_CENTER'}"
+            scale-control="true"
+            street-view-control="true"
+            street-view-control-options="{position:'LEFT_TOP'}">
+            <marker position="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]"></marker>
+          </ng-map>
+          
+      </div>
        
     </div>
     

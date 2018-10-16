@@ -13,13 +13,6 @@ export default class Ofertas {
     }).then((res) => res.data.offer);
   }
 
-  /*gettype(type) {
-        return this._$http({
-          url: this._AppConstants.api + '/events/ftype/'+type,
-          method: 'GET',
-        }).then((res) => res.data.events);
-      }*/
-
   getOffer(id) {
     return this._$http({
       url: this._AppConstants.api + '/offer/'+ id,
