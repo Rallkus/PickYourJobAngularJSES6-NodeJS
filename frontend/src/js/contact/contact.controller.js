@@ -34,7 +34,7 @@ class ContactCtrl {
           console.log('Email sent correctly!');
           Toaster.showToaster('success','Email sent correctly!');
           setTimeout(function() {
-            $state.go('app.home');
+            $state.go('app.ofertas');
           }, 2000);
         } else {
           Toaster.showToaster('error','Problem sending your email, please try again later!');

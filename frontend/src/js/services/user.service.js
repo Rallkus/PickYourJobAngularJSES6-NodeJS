@@ -47,7 +47,7 @@ export default class User {
     this.current = null;
     this._JWT.destroy();
     this._toaster.showToaster('success','Logged out');
-    this._$state.go('app.home');
+    this._$state.go('app.ofertas');
   }
 
   verifyAuth() {
@@ -86,7 +86,7 @@ export default class User {
     let deferred = this._$q.defer();
     this.verifyAuth().then((authValid) => {
       if (authValid !== bool) {
-        this._$state.go('app.home')
+        this._$state.go('app.ofertas')
         deferred.resolve(false);
       } else {
         deferred.resolve(true);

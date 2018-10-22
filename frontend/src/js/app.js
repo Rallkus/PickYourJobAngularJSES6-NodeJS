@@ -16,7 +16,6 @@ import './config/app.templates';
 import './layout';
 import './components';
 import './contact';
-import './home';
 import './profile';
 import './services';
 import './auth';
@@ -34,13 +33,12 @@ const requires = [
   'templates',
   'app.layout',
   'app.components',
-  'app.home',
   'app.ofertas',
-  'app.profile',
   'app.contact',
   'ngMap',
   'app.services',
   'app.auth',
+  'app.profile',
   toastr
 ];
 

@@ -55,7 +55,7 @@ UserSchema.methods.toProfileJSONFor = function(user){
     username: this.username,
     bio: this.bio,
     image: this.image || 'http://robohash.org/'+ this.username +'?set=set2&bgset=bg2&size=256x256',
-    following: user ? user.isFollowing(this._id) : false
+    email:this.email
   };
 };
 

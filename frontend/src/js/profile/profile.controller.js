@@ -3,6 +3,7 @@ class ProfileCtrl {
     'ngInject';
 
     this.profile = profile;
+    console.log(this.profile);
 
     setTimeout(function(){
       let footer = document.getElementById('footer');

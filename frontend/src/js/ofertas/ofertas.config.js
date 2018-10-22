@@ -3,7 +3,7 @@ function OfertasConfig($stateProvider) {
 
   $stateProvider
   .state('app.ofertas', {
-    url: '/ofertas',
+    url: '/',
     controller: 'OfertasCtrl',
     controllerAs: '$ctrl',
     templateUrl: 'ofertas/ofertas.html',

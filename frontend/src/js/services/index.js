@@ -18,4 +18,7 @@ servicesModule.service('JWT', JwtService);
 import OfertasService from './ofertas.service'
 servicesModule.service('Ofertas', OfertasService);
 
+import ProfileService from './profile.service';
+servicesModule.service('Profile', ProfileService);
+
 export default servicesModule;

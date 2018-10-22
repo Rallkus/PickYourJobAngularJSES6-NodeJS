@@ -112,19 +112,5 @@ router.get('/auth/googleplus/callback',
     passport.authenticate('twitchtv', {
      successRedirect : 'http://localhost:4000/#!/auth/sociallogin',
      failureRedirect: '/' }));
-
-   
-
-router.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email', 'public_profile']}));
-router.get('/auth/facebook/callback',
-      passport.authenticate('facebook',{ 
-      successRedirect: 'http://nodejs-angular-final1-yomogan.c9users.io:8080/#!/auth/sociallogin', 
-      failureRedirect: '/' }));
-      
-router.get('/auth/twitter', passport.authenticate('twitter'));
-router.get('/auth/twitter/callback',
-    passport.authenticate('twitter',{
-      successRedirect: 'http://nodejs-angular-final1-yomogan.c9users.io:8080/#!/auth/sociallogin',
-      failureRedirect: '/' }));
       
 module.exports = router;

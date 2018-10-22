@@ -22,7 +22,7 @@ class AuthCtrl {
     this._User.attemptAuth(this.authType, this.formData).then(
       (res) => {
         this._toaster.showToaster('success','Successfully Logged In');
-        this._$state.go('app.home');
+        this._$state.go('app.ofertas');
       },
       (err) => {
         this._toaster.showToaster('error','Error trying to login');

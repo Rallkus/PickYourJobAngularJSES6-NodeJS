@@ -3,7 +3,6 @@ function ProfileConfig($stateProvider) {
 
   $stateProvider
   .state('app.profile', {
-    abstract: true,
     url: '/@:username',
     controller: 'ProfileCtrl',
     controllerAs: '$ctrl',
@@ -12,19 +11,19 @@ function ProfileConfig($stateProvider) {
       profile: function(Profile, $state, $stateParams) {
         return Profile.get($stateParams.username).then(
           (profile) => profile,
-          (err) => $state.go('app.home')
+          (err) => $state.go('app.ofertas')
         )
       }
     }
-  })
+  });/*
 
   .state('app.profile.main', {
     url:'',
-    controller: 'ProfileArticlesCtrl',
+    controller: 'ProfileCtrl',
     controllerAs: '$ctrl',
-    templateUrl: 'profile/profile-articles.html',
+    templateUrl: 'profile/profile.html',
     title: 'Profile'
-  })
+  });/*
   
   .state('app.profile.favorites', {
     url:'/favorites',
@@ -32,7 +31,7 @@ function ProfileConfig($stateProvider) {
     controllerAs: '$ctrl',
     templateUrl: 'profile/profile-articles.html',
     title: 'Favorites'
-  });
+  });*/
 
 };
 

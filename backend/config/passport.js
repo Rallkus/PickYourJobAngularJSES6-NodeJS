@@ -88,12 +88,12 @@ function(accessToken, refreshToken, profile, done) {
     } else {
       console.log('USUARIO NO EXISTE');
       console.log(profile);
-      console.log(profile.name);
+      console.log(profile.username);
       console.log(profile.email);
       console.log(profile.logo);
       var user = new User({
           idsocial: profile.id,
-          username: profile.name,
+          username: profile.username,
           email: profile.email,
           bio: profile.logo,
       });

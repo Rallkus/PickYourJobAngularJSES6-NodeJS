@@ -1,5 +1,21 @@
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeqTen9KlvtvGNuSj3Kz06RK7Gj4WZsAU"></script> -->
 <!-- <br/> -->
+<script src="script-tags-for-development.js"></script>
+<style>
+    .ng-map-info-window {
+      background-color: navy;
+      color: #fff;
+    }
+    .ng-map-info-window div:first-child > div:nth-child(1) {
+      border-top-color: navy !important;
+    }
+    .ng-map-info-window div:first-child > div:nth-child(3) div {
+      background-color: transparent !important;
+    }
+    .ng-map-info-window div:first-child > div:nth-child(4) {
+      background-color: transparent !important;
+    }
+  </style>
 <div id="contenido" class="row">
   <br>
   <div class="container">
@@ -17,23 +33,28 @@
             {{$ctrl.oferta.descripcion}} con los siguientes requisitos: <br>
             {{$ctrl.oferta.requisitos}} <br>
             Con una renumeración anual de {{$ctrl.oferta.sueldo}} € anuales <br>
-            Hay un total de {{$ctrl.oferta.plazasDisponibles}}, a qué esperas?
+            Hay un total de {{$ctrl.oferta.plazasDisponibles}} plazas disponibles, a qué esperas?
         </div>
         <br>
     </div>
 
     <div>
-            <ng-map center="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]" zoom="12" 
-            pan-control="true"
-            pan-control-options="{position:'TOP_RIGHT'}"
-            map-type-control="true"
-            map-type-control-options="{style:'HORIZONTAL_BAR', position:'BOTTOM_CENTER'}"
-            zoom-control="true"
-            zoom-control-options="{style:'LARGE', position:'LEFT_CENTER'}"
-            scale-control="true"
-            street-view-control="true"
-            street-view-control-options="{position:'LEFT_TOP'}">
-            <marker position="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]"></marker>
+
+          <ng-map default-style="true" center="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]" zoom="12">
+            <marker id="foo" position="[{{$ctrl.oferta.latitud}}, {{$ctrl.oferta.longitud}}]"
+              on-click="map.showInfoWindow('bar')">
+            </marker>
+            <info-window id="bar" visible-on-marker="foo">
+              <div ng-non-bindable>
+                <div id="siteNotice"></div>
+                <h1 id="firstHeading" class="firstHeading">{{$ctrl.oferta.empresa}}</h1>
+                <div id="bodyContent">
+                  <p><b>{{$ctrl.oferta.empresa}}</b></p>
+                  <p>{{$ctrl.oferta.sueldo}} € anuales</p>
+                  <p>Requisitos: {{$ctrl.oferta.requisitos}}</p>
+                </div>
+              </div>
+            </info-window>
           </ng-map>
           
       </div>

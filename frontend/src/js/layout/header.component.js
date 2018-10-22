@@ -5,7 +5,6 @@ class AppHeaderCtrl {
     this.appName = AppConstants.appName;
     this.currentUser = User.current;
     var vm = this;
-
     $scope.$watch('User.current', (newUser) => {
       this.currentUser = newUser;
     })
