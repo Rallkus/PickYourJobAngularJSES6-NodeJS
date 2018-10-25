@@ -17,21 +17,30 @@
 
         <list-errors errors="$ctrl.errors"></list-errors>
 
-        <form ng-submit="$ctrl.submitForm()">
+        <form ng-submit="$ctrl.submitForm()" id="auth_form" name="auth_form">
           <fieldset ng-disabled="$ctrl.isSubmitting">
 
             <fieldset class="form-group" ng-show="$ctrl.authType === 'register'">
               <input class="form-control form-control-lg"
                 type="text"
                 placeholder="Username"
-                ng-model="$ctrl.formData.username" />
+                ng-model="$ctrl.formData.username"
+                id="inputName" name="inputName"
+                ng-required="$ctrl.authType === 'register'" />
+                <span class="text-danger" ng-show="auth_form.inputName.$error.required && (auth_form.inputName.$dirty || auth_form.inputName.$touched)">The name is required</span>
             </fieldset>
 
             <fieldset class="form-group">
               <input class="form-control form-control-lg"
                 type="email"
+                required 
+                id="inputEmail" 
+                name="inputEmail" 
+                ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*$/i"
                 placeholder="Email"
                 ng-model="$ctrl.formData.email" />
+                <span class="text-danger" ng-show="auth_form.inputEmail.$error.required && (auth_form.inputEmail.$dirty || auth_form.inputEmail.$touched)">The email is required</span>
+                <span class="text-danger" ng-show="auth_form.inputEmail.$error.email">The email is not valid</span>
             </fieldset>
 
             <fieldset class="form-group">

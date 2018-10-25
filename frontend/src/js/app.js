@@ -20,6 +20,7 @@ import './profile';
 import './services';
 import './auth';
 import './ofertas';
+import 'angular-messages';
 import Toaster from './services/toaster.service';
 
 
@@ -39,6 +40,7 @@ const requires = [
   'app.services',
   'app.auth',
   'app.profile',
+  'ngMessages',
   toastr
 ];
 

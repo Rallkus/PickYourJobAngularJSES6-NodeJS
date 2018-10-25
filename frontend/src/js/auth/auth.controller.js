@@ -10,6 +10,9 @@ class AuthCtrl {
     this.title = $state.current.title;
     this.authType = $state.current.name.replace('app.', '');
     console.log(this.authType);
+    if(this.authType === "login"){
+      //$scope.formData.username = "NoValue";
+    }
 
     setTimeout(function(){
       let footer = document.getElementById('footer');
