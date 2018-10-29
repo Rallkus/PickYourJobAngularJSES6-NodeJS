@@ -24,8 +24,9 @@ class AuthCtrl {
     this.isSubmitting = true;
     this._User.attemptAuth(this.authType, this.formData).then(
       (res) => {
+        console.log(res.data);
         this._toaster.showToaster('success','Successfully Logged In');
-        this._$state.go('app.ofertas');
+        //this._$state.go('app.ofertas');
       },
       (err) => {
         this._toaster.showToaster('error','Error trying to login');

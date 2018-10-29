@@ -10,8 +10,6 @@ var UserSchema = new mongoose.Schema({
   email: String,
   bio: String,
   image: String,
-  favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Article' }],
-  following: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   hash: String,
   salt: String
 }, {timestamps: true});
@@ -54,7 +52,7 @@ UserSchema.methods.toProfileJSONFor = function(user){
   return {
     username: this.username,
     bio: this.bio,
-    image: this.image || 'http://robohash.org/'+ this.username +'?set=set2&bgset=bg2&size=256x256',
+    image: this.image || 'http://robohash.org/'+ this.username +'?set=set4&bgset=bg2&size=256x256',
     email:this.email
   };
 };
